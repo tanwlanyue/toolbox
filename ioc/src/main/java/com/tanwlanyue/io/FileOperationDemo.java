@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.nio.file.*;
 import java.nio.file.attribute.BasicFileAttributes;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -67,6 +68,9 @@ public class FileOperationDemo {
         }
         // 删除文件或目录
         Files.deleteIfExists(path);
+
+        FindJavaVisitor[] findJavaVisitors = new ArrayList<FindJavaVisitor>().toArray(new FindJavaVisitor[]{});
+
     }
 
     private static class FindJavaVisitor extends SimpleFileVisitor<Path> {
